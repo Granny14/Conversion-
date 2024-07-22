@@ -1,63 +1,20 @@
-# Conversion
+# Unit Converter
 
-# Step 1: Create a New Project in NetBeans
-- **Open NetBeans.**
-- **Go to File -> New Project.**
-- **Select Java under Categories and Java Application under Projects. Click Next.**
-- **Name your project, e.g., Conversionunit. Ensure "Create Main Class" is checked and set to something like Conversionunit.Main. Click Finish.**
+This Java application allows you to convert units between different measurement systems. Currently, the program supports conversions for the following units:
 
-# Step 2: Create the Conversion Program
-- **Open the Main.java file in the unitconverter package.**
-- **Replace the content with the following code:**
+- Feet to Meters
+- Pounds to Kilograms
+- Fahrenheit to Celsius
 
-  import java.util.Scanner;
+## Features
 
+- User-friendly input prompts to guide the user through the conversion process.
+- Modular design with a `Converter` class handling the conversion logic.
+- Simple switch-case structure to determine the correct conversion based on user input.
 
-public class Conversionunit {
-    public static void ConversionUnit(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+## How to Use
 
-        System.out.println("Enter the unit you want to convert from (feet, pounds, fahrenheit):");
-        String fromUnit = scanner.nextLine().toLowerCase();
-
-        System.out.println("Enter the unit you want to convert to (meters, kilograms, celsius):");
-        String toUnit = scanner.nextLine().toLowerCase();
-
-        System.out.println("Enter the quantity to be converted:");
-        double quantity = scanner.nextDouble();
-
-        Converter converter = new Converter();
-        double result = 0;
-
-        switch(fromUnit) {
-            case "feet":
-                if(toUnit.equals("meters")) {
-                    result = converter.feetToMeters(quantity);
-                }
-                break;
-            case "pounds":
-                if(toUnit.equals("kilograms")) {
-                    result = converter.poundsToKilograms(quantity);
-                }
-                break;
-            case "fahrenheit":
-                if(toUnit.equals("celsius")) {
-                    result = converter.fahrenheitToCelsius(quantity);
-                }
-                break;
-            default:
-                System.out.println("Invalid conversion units.");
-                System.exit(0);
-        }
-
-        System.out.println("The result of the conversion is: " + result);
-    }
-}
-
-# Step 3: Run the Program
-- **Right-click on the Main.java file and select Run File.**
-- **Follow the prompts in the console to test your conversions.**
-
-# Link your local repository to the GitHub repository:
-
-git remote add origin
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/yourusername/UnitConverter.git
+   cd UnitConverter
