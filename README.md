@@ -43,7 +43,7 @@ This Java application allows you to convert units between different measurement 
 - **Enter the unit you want to convert to (meters, kilograms, celsius):**
 - **meters**
 - **Enter the quantity to be converted:**
-- **10**
+- **Any quantity**
 - **The result of the conversion is: 3.048**
 
 ## Code Structure
